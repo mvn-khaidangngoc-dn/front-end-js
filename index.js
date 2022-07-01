@@ -84,3 +84,61 @@
     
     arr5.shift();
     console.log(arr5);
+
+//8. Write a JavaScript program to compute the sum of the two given integers. 
+//      If the two values are same, then returns triple their sum.
+
+    var a = Math.floor( Math.random() * 100 ) + 1;
+    var b = 19 ;
+    if(a != b){
+        c =  a + b ;
+    }else {
+        c = 3 * a + 3 * b;
+    }
+    console.log(c);
+
+//9. Write a JavaScript program to compute the absolute difference between a specified number and 19.
+//  Returns triple their absolute difference if the specified number is greater than 19.
+
+    if (a < b) {
+        d = b - a ;
+    }else if (a > b){
+        d = (a - b)*3;
+    }else{
+        d = a - b ;
+    }
+    console.log(d);
+
+// 10. A masked number is a string that consists of digits and one asterisk (*) that 
+// should be replaced by exactly one digit. Given a masked number find all the possible options 
+// to replace the asterisk with a digit to produce an integer divisible by 3.
+
+    function divisible3 (a){
+        var output=[]
+        for(i=0;i<10;i++){
+            var b = a.replace('*',i)
+            if(b%3===0){
+                output.push(b)
+            }
+        }
+        return output;
+    }
+
+    console.log(divisible3('1243*'));
+
+// 11. 4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced 
+// by exactly one digit. Given a masked number find all the possible options to replace the asterisk with 
+// a digit to produce an integer divisible by 6.
+
+    function divisible6 (a){
+        var output=[]
+        for(i=0;i<10;i++){
+            var b = a.replace('*',i)
+            if(b%6===0){
+                output.push(b)
+            }
+        }
+        return output;
+    }
+
+    console.log(divisible6('1243*'));
